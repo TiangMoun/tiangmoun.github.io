@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 10%;
+            display: flex;
+            position: relative
+        }
+
+        .b {
+            width: 90%;
+            display: flex;
+            height: 100%;
+            position: relative
+        }
+
+        .x {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        body,
+        html {
+            height: 99%;
+        }
+
+        .Homepage {
+            /* color: #0fafff!important; */
+
+        }
+    </style>
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 10%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #f1f1f1;
+            overflow-x: hidden;
+            padding-top: 20px;
+
+
+
+        }
+
+
+
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            margin-left: -40px;
+            border-style: solid;
+            border-width: center;
+
+        }
+
+
+
+        .sidenav a:hover {
+            color: #0fafff;
+        }
+
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        .isclick {
+            display: flex;
+            justify-content: flex-end;
+            /* 对齐到右侧 */
+        }
+
+        button {
+            transform: translateX(-4px);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="x">
+        <div class="a">
+            <div class="sidenav">
+                <div class="isclick">
+                    <button id="click" onclick="click() ">&lt;&lt;</button>
+
+                </div>
+
+                <ul id="dve">
+                    <a class="Homepage" onclick="frame.src='html/TianMo.html'">主页</a>
+                    <a onclick="frame.src='old/guide/Particle simulation.html'">粒子模拟</a>
+                    <a onclick="frame.src='html/sgame.html'">sgame</a>
+                    <a onclick="frame.src='html/wgame.html'">wgame</a>
+
+
+                    <a onclick="frame.src='html/randomNumbers.html'">随机数生成器</a>
+                    <a onclick="frame.src='old/oldHomepage.html'">老主页</a>
+                </ul>
+            </div>
+
+
+        </div>
+        <iframe id="frame" src="html/TianMo.html" class="b" frameborder="0"></iframe>
+
+    </div>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

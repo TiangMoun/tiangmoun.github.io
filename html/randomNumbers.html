@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            left: 35%;
+            height: 40%;
+        }
+
+        button {
+            position: relative;
+            left: 110px;
+            font-size: 110%;
+
+        }
+
+        input {
+
+            font-size: 110%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button onclick="text.innerHTML = '结果: &nbsp&nbsp' +randomNum(input1.value,input2.value) ">生成随机数</button>
+    </div>
+    <div>
+        <label for="input1">下限: &nbsp&nbsp</label>
+        <input id="input1"></input>
+    </div>
+    <div>
+        <label for="input2">上限: &nbsp&nbsp</label>
+        <input id="input2"></input>
+    </div>
+    <div>
+
+        <p id="text">结果: &nbsp&nbsp</p>
+    </div>
+
+
+
+</body>
+<script>//生成从minNum到maxNum的随机数
+    function randomNum(minNum, maxNum) {
+        switch (arguments.length) {
+            case 1:
+                return parseInt(Math.random() * minNum + 1, 10);
+                break;
+            case 2:
+                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                break;
+            default:
+                return 0;
+                break;
+        }
+    } </script>
+
+</html>
