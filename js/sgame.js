@@ -49,7 +49,7 @@ function p1() {
     if (a / 1000 >= Number(P.innerHTML)) {
         a -= Number(P.innerHTML) * 1000;
         P.innerHTML = Number(P.innerHTML) + 1;
-        PB.innerHTML = "+p1 (" + P.innerHTML + ")"
+        PB.innerHTML = "+p1 (" + Number(P.innerHTML)*10 + ")"
 
     }
 }
